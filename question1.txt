@@ -5,7 +5,7 @@ In the context of version control systems, cherry-picking refers to the act of s
 This can be useful when you want to apply only a few changes from one branch to another, rather than merging the entire branch.
 
 Use case:
-One use case for cherry-picking is when you have made multiple commits on a branch that are intended for separate pull requests or releases. Rather than merging the entire branch, you can cherry-pick the individual commits that you want to apply to the target branch. This can be useful if you want to apply the changes in a specific order, or if you only want to apply some of the changes and not all of them.
+1. One use case for cherry-picking is when you have made multiple commits on a branch that are intended for separate pull requests or releases. Rather than merging the entire branch, you can cherry-pick the individual commits that you want to apply to the target branch. This can be useful if you want to apply the changes in a specific order, or if you only want to apply some of the changes and not all of them.
 
 Steps for cherry-pick:
 
