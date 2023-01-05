@@ -1,0 +1,23 @@
+5. Difference between --force push and --force-with-lease, You have to show the use of both, also you have to show in what scenario --force-with-lease is used?
+
+Answer:
+
+git push --force is a command that forcibly updates the remote repository with the local commits, even if it means discarding commits that have been made on the remote repository. This can be dangerous because it can overwrite commits that have been pushed by other people, potentially leading to data loss.
+
+
+git push --force-with-lease is a variant of git push --force that is designed to be safer. It works by checking that the remote repository has not been updated since you last fetched from it. If the remote repository has been updated in the meantime, git push --force-with-lease will refuse to push your changes, to prevent you from overwriting commits that you don't have locally.
+
+Use for git push --force :
+
+1. You clone a repository and make some changes locally.
+2. You push your changes to the remote repository using git push.
+3. Someone else pushes new commits to the same branch on the remote repository.
+4. You make more changes locally and try to push them using git push --force. This will succeed and      overwrite the new commits that have been pushed by the other person.
+
+Use of git push --force-with-lease:
+
+Once you clone the repo and make some changes locally and simultaneosly someone else also updated changes and pushed them remotely now if you try to push your update file to the remote repository
+using git push --force-with-lease it will warn you that your local repo is not up-to date with the remote repository, you can then sync your repo and again push the changesto the remote repository.
+
+DEMO:
+
