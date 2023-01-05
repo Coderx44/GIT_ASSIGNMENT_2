@@ -3,6 +3,7 @@ Answer:
 To unstage changes from the staged area, you can use the git reset command.
 
 Command:
+
 git restore --staged <file>
 
 DEMO:
