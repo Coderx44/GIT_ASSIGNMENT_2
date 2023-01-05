@@ -1,0 +1,26 @@
+3. How to combine two commits into one commit? For Example, you have 4 different commits C1, C2, C3, and  C4 and you to combine C2 and C3 into one single commit. 
+
+Answer:
+
+To combine multiple commits into a single commit in Git, you can use the git rebase command with the -i flag. This will open an interactive rebase session, where you can specify which commits to combine.
+
+Here is the general syntax for starting an interactive rebase session:
+
+Copy code
+git rebase -i <base-commit>
+The base-commit is the commit that you want to base your new commits on. In the case of combining commits, this would typically be the commit immediately preceding the ones you want to combine.
+
+For example, to combine commits C2 and C3 into a single commit, you would specify the commit C1 as the base commit:
+
+Copy code
+git rebase -i C1
+This will open an editor window with a list of the commits that will be included in the rebase. The commits will be listed in chronological order, with the oldest commit at the bottom.
+
+To combine commits, you need to change the action for the commits that you want to combine from pick to squash. For example:
+
+Copy code
+pick C1
+squash C2
+squash C3
+pick C4
+Save and close the editor window. Git will then combine the commits C2 and C3 into a single commit and apply the changes. If there are conflicts, you will need to resolve them before continuing the rebase.
